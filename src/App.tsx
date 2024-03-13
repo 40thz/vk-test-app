@@ -1,19 +1,13 @@
-import { AppRoot, Group, Header, Panel, PanelHeader, SimpleCell, SplitCol, SplitLayout, View } from '@vkontakte/vkui';
+import { AppRoot, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { Cart } from './containers/Cart';
 
 export const App = () => (
   <AppRoot>
-    <SplitLayout header={<PanelHeader delimiter="none" />}>
-      <SplitCol autoSpaced>
-        <View activePanel="main">
-          <Panel id="main">
-            <PanelHeader>VK-MARKET</PanelHeader>
-            <Group header={<Header mode="secondary">Items</Header>}>
-              <SimpleCell>Hello</SimpleCell>
-              <SimpleCell>World</SimpleCell>
-            </Group>
-          </Panel>
-        </View>
-      </SplitCol>
-    </SplitLayout>
+    <View activePanel="main">
+      <Panel id="main">
+        <PanelHeader>VK-MARKET</PanelHeader>
+        <Cart />
+      </Panel>
+    </View>
   </AppRoot>
 );

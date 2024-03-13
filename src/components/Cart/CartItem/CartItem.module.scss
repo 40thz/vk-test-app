@@ -1,0 +1,19 @@
+.cart {
+  overflow: hidden;
+
+  &_image {
+    max-height: 200px;
+    overflow: hidden;
+  }
+
+  &_control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_row {
+    display: flex;
+    align-items: center;
+  }
+}
